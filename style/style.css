@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  height: 1000px;
+  width: 1000px;
+}
+
+.search {
+  display: flex;
+  flex-grow: 2;
+  height: 300px;
+  flex-direction: column;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.searchList {
+  display: flex;
+  flex-grow: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+}
