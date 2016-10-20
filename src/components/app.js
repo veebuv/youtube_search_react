@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { textChange } from '../actions/index';
 
-export default class App extends Component {
+class App extends Component {
 
   constructor(props) {
     super(props);
@@ -10,11 +12,20 @@ export default class App extends Component {
   }
 
   render() {
-    const { initialMessage } = this.state;
+    const { message, dispatch } = this.props;
     return (
       <div>
-        {initialMessage}
+        {message}
+        <button onClick={() => dispatch(textChange('HEllo'))}></button>
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    message: state.AppReducer.message,
+  };
+}
+
+export default connect(mapStateToProps)(App);
