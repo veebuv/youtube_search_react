@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div>
         {message}
-        <button onClick={() => dispatch(textChange('HEllo'))}></button>
+        <button onClick={() => dispatch(textChange('Hello'))}></button>
       </div>
     );
   }
